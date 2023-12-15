@@ -127,13 +127,22 @@
             justify-content: center;
             align-items: center;
         }
+        .sova   {
+            color: #ffffff;
+            background-image: url('bgsova.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 290px;
+            margin: 0;
+            display: flex;
+        }
+
         .slideshow-container {
             max-width: 800px;
             position: relative;
             margin: auto;
         }
-
-        /* Style for the slideshow images */
         .mySlides {
             display: none;
             width: 100%;
@@ -228,11 +237,11 @@
         </div>
     </section>
     <hr>
-    <section id="quote">
+    <section class ="sova" id="quote">
         <h2>Quote</h2>
         <div style="display: flex; align-items: center;">
         <p style="padding:70px;"><i><b>"If you're not a good shot today, don't worry. There are other ways to be useful"-Sova from Valorant</b></i></p>
-        <img src="sova.jpg" alt="Profile Picture" style="border-radius:20px; width: 20%; height: 20%; margin-right: 20px;">
+        <img src="sova.jpg" alt="Sova" style="border-radius:20px; width: 20%; height: 70%;">
     </div>
     </section>
     <hr>
@@ -296,7 +305,7 @@
             }
             slides[slideIndex - 1].style.display = "block";
             dots[slideIndex - 1].className += " active";
-            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+            setTimeout(showSlides, 2000);
         }
     </script>
 </body>
