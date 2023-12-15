@@ -127,6 +127,31 @@
             justify-content: center;
             align-items: center;
         }
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Style for the slideshow images */
+        .mySlides {
+            display: none;
+            width: 100%;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active {
+            background-color: #717171;
+        }
     </style>
 </head>
 <body>
@@ -183,6 +208,24 @@
             <li>Cosplay: Violet Evergarden, Zero Two, Yor, Makima, Tartaglia</li>
             <li>Listening to music: Classical, traditional chinese music, kpop/jpop</li>
         </ul>
+        <div class="slideshow-container"><center>
+            <div class="mySlides">
+                <img src="cosp2.jpg" alt="Image 1" style="width:30%; height: 30%;">
+            </div>
+            <div class="mySlides">
+                <img src="cosp1.jpg" alt="Image 2" style="width:30%; height: 30%;">
+            </div>
+            <div class="mySlides">
+                <img src="cosp3.png" alt="Image 3" style="width:30%; height: 30%;">
+            </div>
+        </center>
+        <br>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
     </section>
     <hr>
     <section id="quote">
@@ -233,6 +276,28 @@
     <footer>
         <p>&copy; 2023 Ma. Khella M. Tan | All rights reserved.</p>
     </footer>
+    <script>
+        var slideIndex = 0;
+        showSlides();
 
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+            setTimeout(showSlides, 2000); // Change slide every 2 seconds
+        }
+    </script>
 </body>
 </html>
