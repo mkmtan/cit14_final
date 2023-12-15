@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <title>CIT14 | Activity</title>
+        <style> 
+            body { 
+                margin: 4rem; 
+            } 
+    
+            #formContainer { 
+                margin-bottom: 20px; 
+            } 
+
+            h1{
+                text-align: center;
+            }
+    
+            label { 
+                display: block; 
+                margin-top: 10px; 
+            } 
+    
+            input { 
+                width: 300px; 
+                padding: 8px; 
+                margin-top: 5px; 
+                border: 1px solid #ccc; 
+                border-radius: 4px; 
+            } 
+    
+            button { 
+                margin: 10px; 
+                padding: 8px 16px; 
+                background-color: #91a7d0; 
+                color: #fff; 
+                border: none; 
+                border-radius: 4px; 
+                cursor: pointer; 
+            } 
+    
+            button:hover { 
+                background-color: #f7cac9; 
+            } 
+    
+            table { 
+                border-collapse: collapse; 
+                margin-bottom: 20px; 
+                width: 100%; 
+            } 
+    
+            th, 
+            td { 
+                border: 1px solid #91a7d0; 
+                background-color: #f7cac9;
+                padding: 8px; 
+                text-align: left; 
+            } 
+    
+            th { 
+                background-color: #91a7d0; 
+                color: #fff; 
+            } 
+        </style> 
+    </head>
+    <body>
+        <h1>CIT14 | Activity</h1>
+        <div>
+            <label for="name"> Name:</label>
+            <input type="text" id="name" placeholder="Enter your name"><br>
+            <label for="course"> Course:</label>
+            <input type="text" id="course" placeholder="Enter your course"><br>
+            <label for="section"> Section:</label>
+            <input type="text" id="section" placeholder="Enter your section"><br>
+            <button onclick="addData()"> 
+                Save Record 
+            </button> 
+        </div>
+        <div>
+            <table id="outputTable"> 
+                <tr> 
+                    <th>Name</th> 
+                    <th>Course</th> 
+                    <th>Section</th> 
+                    <th>Action</th> 
+                </tr> 
+            </table> 
+        </div>
+        <script> 
+            function addData() { 
+                let name = 
+                    document.getElementById("name").value; 
+                let course = 
+                    document.getElementById("course").value; 
+                let section = 
+                    document.getElementById("section").value; 
+
+                let table = document.getElementById("outputTable"); 
+                let newRow = table.insertRow(table.rows.length); 
+
+                newRow.insertCell(0).innerHTML = name; 
+                newRow.insertCell(1).innerHTML = course; 
+                newRow.insertCell(2).innerHTML = section; 
+                newRow.insertCell(3).innerHTML = 
+                    '<button onclick="deleteData(this)">Delete</button>'; 
+                
+                clearInputs(); 
+            } 
+    
+            function editData(button) { 
+                let row = button.parentNode.parentNode; 
+                
+                let nameCell = row.cells[0]; 
+                let courseCell = row.cells[1]; 
+                let sectionCell = row.cells[2]; 
+                
+                let name = 
+                    prompt("Enter the updated name:", 
+                        nameCell.innerHTML); 
+                let course = 
+                    prompt("Enter the updated email:", 
+                        courseCell.innerHTML); 
+                let section = 
+                    prompt("Enter the updated mobile details:", 
+                        sectionCell.innerHTML 
+                    );  
+                
+                nameCell.innerHTML = nameInput; 
+                courseCell.innerHTML = emailInput; 
+                sectionCell.innerHTML = numberInput; 
+            } 
+            function deleteData(button) { 
+                
+                let row = button.parentNode.parentNode; 
+    
+                row.parentNode.removeChild(row); 
+            } 
+            function clearInputs() { 
+                
+                document.getElementById("name").value = ""; 
+                document.getElementById("course").value = ""; 
+                document.getElementById("section").value = ""; 
+            } 
+        </script> 
+        <center>
+            <br>
+            <a href="index.html" class="btn" style="display: inline-block; padding: 8px 16px; text-decoration: none; background-color: #91a7d0; color: #fff; border-radius: 4px; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#91a7d0'">Go Back</a>
+        </center>
+    </body>
+</html>

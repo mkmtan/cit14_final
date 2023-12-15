@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Final Project</title>
+    <style>
+ body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: #f6cac9;
+            color: #fff;
+            text-shadow: 2px 2px 4px #333;
+            text-align: center;
+            padding: 1em 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header img {
+            border-radius: 50%; 
+            margin-right: 1em; 
+        }
+
+        header h1, header p {
+            margin: 0; 
+        }
+
+        nav {
+            background-color: #91a7d0;
+            color: white;
+            padding: 0.5em 0;
+            width: 100%;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 1em;
+        }
+
+        section {
+            padding: 2em;
+        }
+
+        .howm {
+            padding: 0;
+        }
+
+        footer {
+            background-color: #91a7d0;
+            color: #fff;
+            text-align: center;
+            padding: 0.5em 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .portfolio-cards {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 10px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 16px;
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .card p {
+            margin: 10px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 8px 16px;
+            text-decoration: none;
+            background-color: pink;
+            color: #000000;
+            border-radius: 4px;
+        }
+        .btn:hover {
+            background-color: #91a7d0; 
+        }
+        .rounded-circle {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .homee  {
+            color: #91a7d0;
+            text-shadow: 0 0 4px #fff;
+            background-image: url('bgimg.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 490px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="pfp.png" class="rounded-circle" alt="Profile Picture">
+        <div>
+            <h1>Ma. Khella</h1>
+            <p>CIT14 | Final Project</p>
+        </div>
+    </header>
+
+    <nav class="w3-bar w3-border">
+        <b><a href="#home" class="w3-bar-item w3-button w3-hover-pink">About Me</a>
+        <a href="#hobbies" class="w3-bar-item w3-button w3-hover-pink">Hobbies</a>
+        <a href="#quote" class="w3-bar-item w3-button w3-hover-pink">Quote</a>
+        <a href="#portfolio" class="w3-bar-item w3-button w3-hover-pink">Portfolio</a></b>
+    </nav>
+
+    <section class ="howm"id="home">
+        <div class="homee">
+        <h2>Welcome to Kaye's Final Project!</h2>
+        <p>Know more about Kaye and view her previous works.</p>
+        </div>
+    </section>
+
+    <section id="home">
+        <h2>About Me</h2>
+        <div style="display: flex; align-items: center;">
+            <img src="piko1.jpg" alt="Profile Picture" style="width: 20%; height: 20%; margin-right: 20px;">
+    
+        <div>
+            <p>Hello! My name is Ma. Khella Tan. I am a student at the University of the Cordilleras.</p>
+            <p><b>Course:</b> Bachelor of Science in Information Technology</p>
+            <p><b>Birthday:</b> May 17, 2002</p>
+            <p><b>Address: </b> Dagupan City, Pangasinan</p>
+            <p><b>Email: </b> mmt0127@students.uc-bcf.edu.ph</p>
+            <p><b>Likes: </b> Ice Cream</p>
+            <p><b>Dislikes: </b> Bell Peppers</p>
+            <div>
+                <a href="https://www.facebook.com/RyujiToraa" target="_blank" style="display: inline-block; padding: 8px 16px; text-decoration: none; background-color: #3b5998; color: #fff; border-radius: 4px; margin-right: 10px;" title="Facebook">Facebook</a>
+            </div>
+        </div>
+    </div>
+
+    </section>
+    <hr>
+    <section id="hobbies">
+        <h2>Hobbies</h2>
+        <p>My hobbies are:</p>
+        <ul>
+            <li>Playing Rhythm Games: osu, Rayark games, etc.</li>
+            <li>Playing Hoyoverse Games: GI, ToT, H:SR</li>
+            <li>Cosplay: Violet Evergarden, Zero Two, Yor, Makima, Tartaglia</li>
+            <li>Listening to music: Classical, traditional chinese music, kpop/jpop</li>
+        </ul>
+    </section>
+    <hr>
+    <section id="quote">
+        <h2>Quote</h2>
+        <div style="display: flex; align-items: center;">
+        <p><i><b>"If you're not a good shot today, don't worry. There are other ways to be useful"-Sova from Valorant</b></i></p>
+        <img src="sova.jpg" alt="Profile Picture" style="border-radius:20px; width: 20%; height: 20%; margin-right: 20px;">
+    </div>
+    </section>
+    <hr>
+    <section id="portfolio">
+        <h2>Programming Portfolio</h2>
+
+        <div class="portfolio-cards">
+            <div class="card">
+                <div class="card-content">
+                    <h3>Activity 1</h3>
+                    <p>Bootstrap + Jquery - Midterm Exam</p>
+                    <a href="project1.html" class="btn">View Project</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-content">
+                    <h3>Activity 2</h3>
+                    <p>Bootstrap + Jquery - Progress Bars with button & event handlers</p>
+                    <a href="project2.html" class="btn">View Project</a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-content">
+                    <h3>Activity 3</h3>
+                    <p>Bootstrap + Jquery - Registration Form</p>
+                    <a href="project3.html" class="btn">View Project</a>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="card-content">
+                    <h3>Activity 4</h3>
+                    <p>Table Rows and Columns</p>
+                    <a href="project4.html" class="btn">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Ma. Khella M. Tan | All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
